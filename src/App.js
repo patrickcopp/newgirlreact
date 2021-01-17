@@ -20,10 +20,16 @@ class App extends Component {
   }
 
   doRequest(){
-    console.log(this.state)
-    this.state.episodes = [];
-    this.state.episodes.push({title:"yolo",script:"lmoa",time:"POGGERS"});
-    this.forceUpdate();
+    fetch('http://localhost:8000/?quote='+this.state.quote)
+    .then(blob => blob.json())
+    .then(data => {
+      this.state.episodes=data;
+    })
+    .then(data => {
+      this.forceUpdate()
+    });
+    console.log(this.state.episodes);
+    
   }
 
   renderTable = (episode,index) => {
