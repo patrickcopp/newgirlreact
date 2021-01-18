@@ -1,6 +1,8 @@
-import { render } from '@testing-library/react';
 import React, { Component } from 'react';
 import * as ReactBootStrap from "react-bootstrap";
+//import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import './style.css';
 
 class App extends Component {
   constructor(props){
@@ -19,17 +21,14 @@ class App extends Component {
     })
   }
 
-  doRequest(){
+  doRequest = function(){
     fetch('http://localhost:8000/?quote='+this.state.quote)
     .then(blob => blob.json())
     .then(data => {
-      this.state.episodes=data;
-    })
-    .then(data => {
-      this.forceUpdate()
+      this.setState({
+        "episodes": data
+      })
     });
-    console.log(this.state.episodes);
-    
   }
 
   renderTable = (episode,index) => {
@@ -45,16 +44,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>
-          <input
-            type= "text"
-            placeholder="Quote"
-            value={this.state.quote}
-            onChange={e => this.updateInput("quote",e.target.value)}
-          />
-          <button
-            onClick={() => this.doRequest()}
-          >Go</button>
+        <div id="header_wrapper">
+          <div id="header_inner">
+            <div className="search-wrapper">
+              <Form
+                autoComplete="off"
+                onSubmit={(e) => {this.doRequest(); e.preventDefault();}}
+              >
+                <Form.Group
+                  id="search-terms-bar"
+                  controlId="formBasicEmail"
+                  value={this.state.quote}
+                  onChange={e => this.updateInput("quote",e.target.value)}
+                  >
+                  <Form.Control placeholder="Search any quote..." />
+                </Form.Group>
+              </Form>
+            </div>
+          </div>
         </div>
         <div>
           <ReactBootStrap.Table>
