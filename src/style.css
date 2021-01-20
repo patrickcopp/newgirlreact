@@ -12,7 +12,6 @@
 	-moz-box-shadow: inset -3px -4px 5px rgba(189,189,189,.17);
 	-webkit-box-shadow: inset -3px -4px 5px rgba(189, 189, 189, 0.17);
 	box-shadow: inset -3px -4px 5px rgba(189,189,189,.17);
-
 }
 #header_inner{
 	width: 100%;
@@ -23,7 +22,6 @@
 	position: absolute;
 	bottom: 0;
 }
-
 #search-terms-bar{
     margin-left: auto;
     margin-right: auto;
@@ -50,9 +48,18 @@
 	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.11);
 	box-shadow: 1px 1px 3px rgba(0,0,0,.11);
 }
+textarea:focus, input:focus{
+    outline: none;
+}
+
+@font-face {
+	font-family: "bebas_neueregular";
+	src: local("bebas_neueregular"),
+	  url("./fonts/BebasNeue-webfont.woff") format("woff");
+	font-weight: normal;
+  }
 
 .search-wrapper{
-	 
     text-align: center;
     margin-top: 150px;
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import * as ReactBootStrap from "react-bootstrap";
-//import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './style.css';
 
@@ -10,7 +9,6 @@ class App extends Component {
     this.state={
       quote:"",
       episodes:[
-        {title:"fuck",script:"XD",time:"dsaf"}
       ]
     }
   }
@@ -21,7 +19,7 @@ class App extends Component {
     })
   }
 
-  doRequest = function(){
+  doRequest = function(e){
     fetch('http://localhost:8000/?quote='+this.state.quote)
     .then(blob => blob.json())
     .then(data => {
@@ -29,6 +27,7 @@ class App extends Component {
         "episodes": data
       })
     });
+    e.target.querySelector('input').blur();
   }
 
   renderTable = (episode,index) => {
@@ -49,16 +48,15 @@ class App extends Component {
             <div className="search-wrapper">
               <Form
                 autoComplete="off"
-                onSubmit={(e) => {this.doRequest(); e.preventDefault();}}
+                onSubmit={(e) => {this.doRequest(e); e.preventDefault();}}
               >
-                <Form.Group
+                <input
                   id="search-terms-bar"
-                  controlId="formBasicEmail"
+                  placeholder="SEARCH ANY QUOTE..."
                   value={this.state.quote}
                   onChange={e => this.updateInput("quote",e.target.value)}
                   >
-                  <Form.Control placeholder="Search any quote..." />
-                </Form.Group>
+                </input>
               </Form>
             </div>
           </div>
