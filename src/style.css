@@ -48,6 +48,13 @@
 	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.11);
 	box-shadow: 1px 1px 3px rgba(0,0,0,.11);
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: rgba(77, 74, 74, 0.144);
+	opacity: 1; /* Firefox */
+  }
+  
+
 textarea:focus, input:focus{
     outline: none;
 }
