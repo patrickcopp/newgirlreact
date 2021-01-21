@@ -1,9 +1,50 @@
 #header_wrapper{min-height: 520px;}
 #header_inner{min-height: 250px;}
 
+#row {
+	display: flex; /* equal height of the children */
+}
+.col {
+	flex-basis: 70%; /* additionally, equal width */
+  }
+.col2 {
+	flex-basis: 15%; /* additionally, equal width */
+	text-align: right;
+  }
+  .col3 {
+	flex-basis: 15%; /* additionally, equal width */
+	text-align: right;
+  }
+.rcorners2 {
+    margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	width: 60%;
+	line-height: 37px;
+	font-family: 'bebas_neueregular';
+	overflow: visible;
+	word-spacing: 5px;
+	color: black;
+	padding: 10px 10px 10px 0px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 40px;
+	border: 1px solid rgba(99, 98, 98, 0.199);
+	-moz-border-radius: 35px;
+	-webkit-border-radius: 35px;
+	border-radius: 15px;
+	-moz-background-clip: border-box;
+	-webkit-background-clip: border-box;
+	background-clip: border-box;
+	background-color: #fff;
+	-moz-box-shadow: 1px 1px 3px rgba(0,0,0,.11);
+	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.11);
+	box-shadow: 1px 1px 3px rgba(0,0,0,.11);
+}
 #header_wrapper{
 	width: 100%;
-	background-color: yellow;
+	background-color: rgb(230, 230, 105);
 	background-image: url('./assets/banner.png');
 	background-size: 900px;
 	background-position: center bottom;
@@ -25,7 +66,7 @@
 #search-terms-bar{
     margin-left: auto;
     margin-right: auto;
-	width: 60%;
+	width: 40%;
 	line-height: 37px;
 	font-family: 'bebas_neueregular';
 	overflow: visible;

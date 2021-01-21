@@ -1,7 +1,20 @@
+import { render } from '@testing-library/react';
 import React, { Component } from 'react';
 import * as ReactBootStrap from "react-bootstrap";
 import Form from 'react-bootstrap/Form';
 import './style.css';
+
+class Episode extends Component {
+  render() {
+    return(
+      <div className="rcorners2" id="row">
+        <div class="col">{this.props.title}</div>
+        <div class="col2">{this.props.time}</div>
+        <div class="col3">HAHA</div>
+      </div>
+    )
+  };
+}
 
 class App extends Component {
   constructor(props){
@@ -27,16 +40,13 @@ class App extends Component {
         "episodes": data
       })
     });
+
     e.target.querySelector('input').blur();
   }
 
   renderTable = (episode,index) => {
     return(
-      <tr key={index}>
-        <td>{episode.title}</td>
-        <td>{episode.script}</td>
-        <td>{episode.time}</td>
-      </tr>
+      <Episode key={index} title={episode.title} time={episode.time} script={episode.script}/>
     )
   }
 
@@ -62,18 +72,7 @@ class App extends Component {
           </div>
         </div>
         <div>
-          <ReactBootStrap.Table>
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Script</th>
-                <th>Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.state.episodes.map(this.renderTable)}
-            </tbody>
-          </ReactBootStrap.Table>
+            {this.state.episodes.map(this.renderTable)}
         </div>
       </div>
   );
