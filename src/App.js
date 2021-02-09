@@ -5,15 +5,34 @@ import Form from 'react-bootstrap/Form';
 import './style.css';
 
 class Episode extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      rotation:false
+    }
+  }
+
   render() {
     return(
       <div className="rcorners2" id="row">
-        <div class="col">{this.props.title}</div>
-        <div class="col2">{this.props.time}</div>
-        <div class="col3">HAHA</div>
+        <div className="col">{this.props.title}</div>
+        <div className="col2">{this.props.time}</div>
+        <div className="col3">
+          <div className={this.state.rotation ? "rotate":""}>
+            <span
+              onClick={(e) => {this.arrowClick();}}
+              className="dropdown_arrow"
+             >
+             </span>
+          </div>   
+        </div>
       </div>
     )
   };
+  arrowClick()
+  {
+    this.setState({rotation:!this.state.rotation});
+  }
 }
 
 class App extends Component {
