@@ -8,38 +8,9 @@
 	flex-basis: 75%;
   }
 .col2 {
-	flex-basis: 15%;
+	flex-basis: 25%;
 	text-align: right;
   }
-  .col3 {
-	flex-basis: 10%;
-	text-align: center;
-  }
-
-.dropdown_arrow:before {
-	content: "\e005";
-}
-.dropdown_arrow{
-	font-family: 'bc-icons';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-
-.rotate {
-	transform: rotate(-180deg);
-}
-
-@font-face {
-	font-family: 'bc-icons';
-	src:url('fonts/bc-icons.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
 
 .rcorners2 {
     margin-left: auto;
@@ -51,7 +22,7 @@
 	overflow: visible;
 	word-spacing: 5px;
 	color: black;
-	padding: 5px 0px 0px 0px;
+	padding: 5px 10px 5px 0px;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;

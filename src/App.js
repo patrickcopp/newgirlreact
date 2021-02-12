@@ -17,22 +17,9 @@ class Episode extends Component {
       <div className="rcorners2" id="row">
         <div className="col">{this.props.title}</div>
         <div className="col2">{this.props.time}</div>
-        <div className="col3">
-          <div className={this.state.rotation ? "rotate":""}>
-            <span
-              onClick={(e) => {this.arrowClick();}}
-              className="dropdown_arrow"
-             >
-             </span>
-          </div>   
-        </div>
       </div>
     )
   };
-  arrowClick()
-  {
-    this.setState({rotation:!this.state.rotation});
-  }
 }
 
 class App extends Component {
