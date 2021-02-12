@@ -1,7 +1,4 @@
-import { render } from '@testing-library/react';
 import React, { Component } from 'react';
-import * as ReactBootStrap from "react-bootstrap";
-import Form from 'react-bootstrap/Form';
 import './style.css';
 
 class Episode extends Component {
@@ -16,7 +13,7 @@ class Episode extends Component {
     return(
       <div className="rcorners2">
         <div id="row">
-          <div className="col">{this.props.title}</div>
+          <div className="col1">{this.props.title}</div>
           <div className="col2">{this.props.time}</div>
         </div>
         <div id="row">
@@ -49,7 +46,7 @@ class App extends Component {
     .then(data => {
       this.setState({
         "episodes": data
-      })
+      }) 
     });
 
     e.target.querySelector('input').blur();
@@ -67,18 +64,20 @@ class App extends Component {
         <div id="header_wrapper">
           <div id="header_inner">
             <div className="search-wrapper">
-              <Form
+              <form
                 autoComplete="off"
                 onSubmit={(e) => {this.doRequest(e); e.preventDefault();}}
+                action="#"
               >
                 <input
+                  type="text"
                   id="search-terms-bar"
                   placeholder="SEARCH ANY QUOTE..."
                   value={this.state.quote}
                   onChange={e => this.updateInput("quote",e.target.value)}
                   >
                 </input>
-              </Form>
+              </form>
             </div>
           </div>
         </div>

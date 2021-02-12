@@ -4,28 +4,32 @@
 #row {
 	display: flex; /* equal height of the children */
 }
-.col {
+.col1 {
+	padding-top: 3%;
+	padding-left: 3%;
 	flex-basis: 75%;
   }
 .col2 {
+	padding-top: 3%;
+	padding-left: 3%;
 	flex-basis: 25%;
 	text-align: right;
   }
 
 .script {
-	font-size: 30px;
-	text-align: middle;
-	padding: 10%;
+	font-size: 25px;
+	padding: 5%;
+	word-spacing: 1px;
   }
 
 .rcorners2 {
     margin-left: auto;
 	margin-right: auto;
 	margin-top: 15px;
-	width: min(600px,60%);
+	width: min(600px,80%);
 	line-height: 37px;
 	font-family: 'bebas_neueregular';
-	overflow: visible;
+	overflow: visible; 
 	word-spacing: 5px;
 	color: black;
 	padding: 5px 10px 5px 0px;
@@ -61,7 +65,7 @@
 	width: 100%;
 	background-image: url('./assets/title.png');
 	background-position: center top;
-	background-size: 400px;
+	background-size: min(400px,100%);
 	background-repeat: no-repeat;
 	position: absolute;
 	bottom: 0;
@@ -69,13 +73,13 @@
 #search-terms-bar{
     margin-left: auto;
     margin-right: auto;
-	width: 40%;
+	width: min(600px,80%);
 	line-height: 37px;
 	font-family: 'bebas_neueregular';
 	overflow: visible;
 	word-spacing: 5px;
 	color: #636363;
-	padding: 10px 80px 8px 20px;
+	padding: 10px 20px 8px 20px;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
