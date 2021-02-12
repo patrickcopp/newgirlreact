@@ -12,6 +12,12 @@
 	text-align: right;
   }
 
+.script {
+	font-size: 30px;
+	text-align: middle;
+	padding: 10%;
+  }
+
 .rcorners2 {
     margin-left: auto;
 	margin-right: auto;

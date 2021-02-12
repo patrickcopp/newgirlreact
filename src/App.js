@@ -8,15 +8,20 @@ class Episode extends Component {
   constructor(props){
     super(props);
     this.state={
-      rotation:false
+
     }
   }
 
   render() {
     return(
-      <div className="rcorners2" id="row">
-        <div className="col">{this.props.title}</div>
-        <div className="col2">{this.props.time}</div>
+      <div className="rcorners2">
+        <div id="row">
+          <div className="col">{this.props.title}</div>
+          <div className="col2">{this.props.time}</div>
+        </div>
+        <div id="row">
+          <div className="script" >{this.props.script}</div>
+        </div>
       </div>
     )
   };
