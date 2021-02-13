@@ -81,7 +81,8 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div>
+        <br></br>
+        <div id="body_wrapper">
             {this.state.episodes.map(this.renderTable)}
         </div>
       </div>

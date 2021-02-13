@@ -25,7 +25,7 @@
 .rcorners2 {
     margin-left: auto;
 	margin-right: auto;
-	margin-top: 15px;
+	margin-bottom: 15px;
 	width: min(600px,80%);
 	line-height: 37px;
 	font-family: 'bebas_neueregular';
@@ -51,7 +51,7 @@
 }
 #header_wrapper{
 	width: 100%;
-	background-color: rgb(230, 230, 105);
+	background-color: #e9e77e;
 	background-image: url('./assets/banner.png');
 	background-size: 900px;
 	background-position: center bottom;
@@ -117,4 +117,12 @@ textarea:focus, input:focus{
 .search-wrapper{
     text-align: center;
     margin-top: 150px;
+}
+
+html, body{
+	background-color: #cacaca;
+}
+
+#body_wrapper{
+	background-color: #cacaca;
 }
