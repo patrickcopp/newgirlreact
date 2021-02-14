@@ -81,7 +81,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <br></br>
+        <div style={{height: "15px", backgroundColor: "#cacaca"}}></div>
         <div id="body_wrapper">
             {this.state.episodes.map(this.renderTable)}
         </div>
