@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   doRequest = function(e){
-    fetch('http://localhost:8000/?quote='+this.state.quote)
+    fetch('http://18.217.134.144/?quote='+this.state.quote)
     .then(blob => blob.json())
     .then(data => {
       this.setState({
@@ -85,9 +85,9 @@ class App extends Component {
         <div id="body_wrapper">
             {this.state.episodes.map(this.renderTable)}
         </div>
-        <footer>
-          
-        </footer>
+        <div className="footer">
+        © 2020 Patrick Copp | <a rel="noreferrer" href="https://github.com/patrickcopp/newgirlreact" target="_blank">Source Code</a>
+        </div>
       </div>
   );
   }

@@ -113,16 +113,33 @@ textarea:focus, input:focus{
 	  url("./fonts/BebasNeue-webfont.woff") format("woff");
 	font-weight: normal;
   }
+  @font-face {
+    font-family: "Futura-Light";
+    src: url("./fonts/FuturaLightRegular.otf") format("opentype");
+}
 
 .search-wrapper{
     text-align: center;
     margin-top: 150px;
 }
 
-html, body{
+html{
 	background-color: #cacaca;
+}
+body{
+	background-color: #cacaca !important;
 }
 
 #body_wrapper{
 	background-color: #cacaca;
+}
+
+.footer{
+	background-color: #cacaca;
+	padding: 15px;
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Futura-Light';
+	font-weight: normal;
+	color: rgba(77, 74, 74, 0.61);
 }
