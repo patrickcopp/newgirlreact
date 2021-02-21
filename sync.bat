@@ -1,1 +1,1 @@
-npm run build && aws s3 sync "C:\Users\Patrick Copp\Documents\GitHub\newgirlreact\build" "s3://newgirlquotes.com/" --exclude ".git/*" --exclude "sync.bat" && aws cloudfront create-invalidation --distribution-id E2KIUYGTYBKOVZ --paths "/*"
+npm run build && aws s3 sync "C:\Users\Patrick Copp\Documents\GitHub\newgirlreact\build" "s3://newgirlquotes.com/" --exclude ".git/*" --exclude "sync.bat" --delete && aws cloudfront create-invalidation --distribution-id E2KIUYGTYBKOVZ --paths "/*"
