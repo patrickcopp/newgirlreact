@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   doRequest = function(e){
-    fetch('http://18.222.75.225/quotes/?quote='+this.state.quote)
+    fetch('https://d1uwzs0p105509.cloudfront.net/?quote='+this.state.quote)
     .then(blob => blob.json())
     .then(data => {
       this.setState({
