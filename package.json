@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.6.0",
     "bootstrap": "^4.5.3",
     "express": "^4.17.1",
+    "mariadb": "^2.5.3",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
@@ -18,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "debug": "nodemon --inspect app.js"
   },
   "eslintConfig": {
     "extends": [
