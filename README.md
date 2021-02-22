@@ -4,7 +4,7 @@
 
 This app is a Quote Searching Service for the show [New Girl](https://www.imdb.com/title/tt1826940/), live at [newgirlquotes.com](https://newgirlquotes.com).
 
-![](site.PNG)
+![](Site.PNG)
 
 ## Installation
 
