@@ -21,3 +21,6 @@ The app uses a series of AWS services to serve the front-end and back-end. The f
 When the user searches for a quote, that request is sent to the back-end through a Cloudfront URL, which is used to allow for HTTPS requests to the back-end. Those requests to Cloudfront are sent to an [EC2](https://aws.amazon.com/ec2/) instance, which processes the request using an in-memory search, and logs the requester's IP, the time of the request, and the amount of processing time required for the search.
 
 ![](Architecture.PNG)
+
+## Credits
+CSS was inspired by sites by Christopher Chu & Garrett Boatman.
