@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   doRequest = function(e){
-    fetch('https://d1uwzs0p105509.cloudfront.net/?quote='+this.state.quote)
+    fetch('https://hi3nx9am6k.execute-api.us-east-2.amazonaws.com/?quote='+this.state.quote)
     .then(blob => blob.json())
     .then(data => {
       this.setState({

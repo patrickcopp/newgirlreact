@@ -10,7 +10,7 @@ This app is a Quote Searching Service for the show [New Girl](https://www.imdb.c
 
 Install node packages using ```npm install```
 
-This app will access an API that I have created that is running at a separate [URL](http://d1uwzs0p105509.cloudfront.net/?quote=example). This API's source code is accessible at a [seperate Github repository](https://github.com/patrickcopp/NewGirlQuotes).
+This app will access an API that I have created that is running at a separate [URL](https://hi3nx9am6k.execute-api.us-east-2.amazonaws.com/?quote=example). This API's source code is accessible at a [seperate Github repository](https://github.com/patrickcopp/NewGirlQuotes).
 
 If you would like to run this app through NodeJS, you can use the app.js file in the root directory (```node app.js```) after creating a production build of the react-app (```npm run build```). Alternatively, because this is a React app, if you want React to handle the server, you can simply run with ```npm run start```.
 
